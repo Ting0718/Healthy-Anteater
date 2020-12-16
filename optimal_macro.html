@@ -18,7 +18,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!--Load JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Load Vega-lite-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@5.1.3"></script>
+
+<!-- Custom styles for this template -->
     <link href="css/optimal.css" rel="stylesheet">
     <!--Load local app.js file-->
     <script type="text/javascript" src="js/optimal.js"></script>
@@ -67,58 +74,55 @@
     </header>
 
     <section>
-
-    <div id="box">
-        <form action="/action_page.php">
-            <label for="Age">Age</label><br>
-            <input type="text" id="name" name="age" placeholder="Enter ages between 18-80">
-            <br>
-
-            <label for="Gender">Gender</label> <br>
-            <input class="radio" type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-            <input class="radio" type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-
-            <label for="Weight">Weight</label><br>
-            <input type="text" id="weight" name="weight" placeholder="Enter your Weight">
-            <select id="weight_measure" name="weight_measure">
-                <option value="kg">kg</option>
-                <option value="pounds">pounds</option>
-            </select> <br>
-
-            <label for="Activity">Activity</label><br>
-            <select id="activity" name="activity">
-                <option value="0">limited exercise</option>
-                <option value="0">light exercise less than three days per week</option>
-                <option value="0">moderate exercise most days of the week</option>
-                <option value="0">hard exercise every day</option>
-                <option value="0">strenuous exercise two or more times per day</option>
-            </select>
-            
-            <br>
-            <label for="Height">Height</label><br>
-            <input type="text" id="feet" name="feet"><label>feet</label>
-            <input type="text" id="inch" name="inch"><label>inches</label>
-            <select id="height_measure" name="height_measure">
-                <option value="feet">feet</option>
-                <option value="cm">cm</option>
-            </select> <br>
-    
-            <button type="button" value="Calculator"> Calculate</button>
-        </form>
-    </div>
-
-        
+        <div id="result">
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-black">
-        <div class="container">
-            <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2020</p>
-        </div>
-        <!-- /.container -->
-    </footer>
+            <div id="chart">
+            </div>
+
+    <section>
+    <div id="box">
+        <label for="Age">Age</label><br>
+        <input type="text" id="age" name="age" placeholder="Enter ages between 18-80"><label style="text-indent: 1em;">years old</label>
+        <br>
+
+        <label for="Gender">Gender</label> <br>
+        <input class="radio" type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input class="radio" type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <label for="Weight">Weight</label><br>
+        <input type="text" id="weight" name="weight" placeholder="Enter your Weight">
+        <select id="weight_measure" name="weight_measure">
+            <option value="kg">kg</option>
+            <option value="pounds">lbs</option>
+        </select> <br>
+
+        <label for="Height">Height</label><br>
+        <input type="text" id="feet" name="feet"><label style="text-indent: 1em;" id="feet_label">feet</label> <br>
+        <input type="text" id="inch" name="inch"><label style="text-indent: 1em;" id="height_label">inches</label>
+        <select id="height_measure" name="height_measure" onchange="changeBox()">
+            <option value="feet">feet</option>
+            <option value="cm">cm</option>
+        </select> <br>
+
+        <label for="Activity">Activity</label><br>
+        <select id="activity" name="activity">
+            <option value="0">limited exercise</option>
+            <option value="1">light exercise less than three days per week</option>
+            <option value="2">moderate exercise most days of the week</option>
+            <option value="3">hard exercise every day</option>
+            <option value="4">strenuous exercise two or more times per day</option>
+        </select>
+        <br>
+        <button onclick="calculate()"> Calculate</button>
+    </div>
+
+    </section>
+
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

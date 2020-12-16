@@ -70,7 +70,6 @@ header.masthead .bg-circle {
   z-index: 0;
   position: absolute;
   border-radius: 100%;
-  background: linear-gradient(0deg, #ee0979 0, #ff6a00 100%);
 }
 header.masthead .bg-circle-1 {
   height: 90rem;
@@ -108,35 +107,6 @@ header.masthead .bg-circle-4 {
     font-size: 4rem;
   }
 }
-.bg-primary {
-  background-color: #ee0979 !important;
-}
-.btn-primary {
-  background-color: #ee0979;
-  border-color: #ee0979;
-}
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
-  background-color: #bd0760 !important;
-  border-color: #bd0760 !important;
-}
-.btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
-}
-.btn-secondary {
-  background-color: #ff6a00;
-  border-color: #ff6a00;
-}
-.btn-secondary:active,
-.btn-secondary:focus,
-.btn-secondary:hover {
-  background-color: #c50 !important;
-  border-color: #c50 !important;
-}
-.btn-secondary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
-}
 
 /* form box */
 input[type=text], select {
@@ -149,7 +119,7 @@ input[type=text], select {
   box-sizing: border-box;
 }
 
-button[type=button] {
+button{
   width: 200px;
   background-color: #4CAF50;
   color: white;
@@ -160,7 +130,7 @@ button[type=button] {
   cursor: pointer;
 }
 
-button[type=button]:hover {
+button:hover {
   background-color: #45a049;
 }
 
