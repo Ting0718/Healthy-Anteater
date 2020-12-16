@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Ting aria-haspopup">
 
     <title>Healthy Anteater</title>
 
@@ -20,6 +20,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/optimal.css" rel="stylesheet">
+    <!--Load local app.js file-->
+    <script type="text/javascript" src="js/optimal.js"></script>
 
 </head>
 
@@ -59,14 +61,55 @@
     <header class="masthead text-center text-white">
         <div class="masthead-content">
             <div class="container">
-                <h2 class="masthead-subheading mb-0">Optimal Macronutrients Calculator
-                    Macronutrients</h2>
+                <h2 class="masthead-heading mb-0">Optimal Macronutrients Calculator</h2>
             </div>
         </div>
     </header>
 
     <section>
-        <p>hello</p>
+
+    <div id="box">
+        <form action="/action_page.php">
+            <label for="Age">Age</label><br>
+            <input type="text" id="name" name="age" placeholder="Enter ages between 18-80">
+            <br>
+
+            <label for="Gender">Gender</label> <br>
+            <input class="radio" type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input class="radio" type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+
+            <label for="Weight">Weight</label><br>
+            <input type="text" id="weight" name="weight" placeholder="Enter your Weight">
+            <select id="weight_measure" name="weight_measure">
+                <option value="kg">kg</option>
+                <option value="pounds">pounds</option>
+            </select> <br>
+
+            <label for="Activity">Activity</label><br>
+            <select id="activity" name="activity">
+                <option value="0">limited exercise</option>
+                <option value="0">light exercise less than three days per week</option>
+                <option value="0">moderate exercise most days of the week</option>
+                <option value="0">hard exercise every day</option>
+                <option value="0">strenuous exercise two or more times per day</option>
+            </select>
+            
+            <br>
+            <label for="Height">Height</label><br>
+            <input type="text" id="feet" name="feet"><label>feet</label>
+            <input type="text" id="inch" name="inch"><label>inches</label>
+            <select id="height_measure" name="height_measure">
+                <option value="feet">feet</option>
+                <option value="cm">cm</option>
+            </select> <br>
+    
+            <button type="button" value="Calculator"> Calculate</button>
+        </form>
+    </div>
+
+        
     </section>
 
     <!-- Footer -->
