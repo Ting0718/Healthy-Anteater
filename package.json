@@ -29,8 +29,10 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-one-page-wonder.git"
     },
     "dependencies": {
+        "axios": "^0.21.0",
         "bootstrap": "4.5.3",
-        "jquery": "3.5.1"
+        "jquery": "3.5.1",
+        "nutritionix-api": "^1.0.4"
     },
     "devDependencies": {
         "browser-sync": "2.26.13",
