@@ -5,6 +5,7 @@ var result;
 var tol_calories_food;
 var tol_calories_exercise;
 
+// search for the food 
 function food_search() {
   var tol_calories_food = 0;
 
@@ -61,6 +62,7 @@ function food_search() {
     });
 }
 
+// search for the exercise
 function exercise_search() {
   var tol_calories_exercise = 0;
 

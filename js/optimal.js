@@ -1,3 +1,4 @@
+// if the height metric is inch, disable the feet input and change inch input to cm input
 function changeBox()
 {   
     var metric = $("#height_measure option:selected").val();
@@ -18,6 +19,7 @@ function changeBox()
     
 }
 
+// return the activity_factor based on how much workout the users do
 function activity_factor(activity)
 {
     if (activity == "0")
@@ -43,6 +45,7 @@ function activity_factor(activity)
 
 }
 
+// calculate the macronutrients users need and show the pie chart of the optimal macro
 function calculate()
 {   
     var age = $("#age").val();
@@ -149,6 +152,7 @@ function calculate()
     vegaEmbed("#chart", pie, { actions: true });
 }
 
+// calculate the calories needed based on the information given by users
 function calc_calories(gender, weight, w_metric, h_metric, age, feet, inch)
 {
     var gender = gender;

@@ -2,6 +2,7 @@ var result;
 var apiKey = "7f4e564bd419069a3a0dd6f694b1cb79";
 var apiId = "086e9742";
 
+// get barcode image
 function search() {
   var input = document.querySelector(".controls input[type=file]");
   if (input.files && input.files.length) {
@@ -9,6 +10,7 @@ function search() {
   }
 }
 
+// search for the upc bar code number
 function decode(src) {
   var config = {
     locator: {
@@ -47,6 +49,7 @@ function decode(src) {
           $("#result").empty()
           result = response;
 
+        // assing the attribute to variables and add variables to list
         var food_name = result["foods"][0].food_name;
         var calories = result["foods"][0].nf_calories;
         var total_fat = result["foods"][0].nf_total_fat;
@@ -77,6 +80,7 @@ function decode(src) {
         + "<tr><td> sugars </td>" + "<td>" + sugars + " g</td>"
         + "<tr><td> protein </td>" + "<td>" + protein + " g</td>";
         
+        // append the table to string
         $("#result").append("<h4>" + food_name + "</h4>" + '<img src=' + photo_url + '>' + tableString);
         })
         .fail(function (response) {
@@ -84,6 +88,7 @@ function decode(src) {
         });
 
     } else {
+      //empty the div and alert users that there are no match
       $(".controls").empty();
       alert("There's no such barcode");
     }

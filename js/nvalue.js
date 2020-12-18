@@ -4,6 +4,7 @@ var url = "https://trackapi.nutritionix.com/v2/natural/nutrients";
 var result;
 var nutrients;
 
+// serach for the food's nutrients
 function search()
 {
     $("#result").empty();
@@ -72,12 +73,10 @@ function search()
         
         $("#result").append("<h4>" + food_name + "</h4>" + '<img src=' + photo_url + '>' + tableString);
 
-        //console.log(JSON.stringify(food_name))
 
-        console.log(result);
-        //$("#result").append(JSON.stringify(result))
         })
         .fail(function (response) {
+          // alert users that there's no result and clear the div
         alert("no such food!");
         $("#queryItem").val("");
         });
