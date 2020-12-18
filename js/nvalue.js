@@ -38,6 +38,8 @@ function search()
         .done(function (response) {
         result = response;
 
+        console.log(result)
+
         var food_name = result["foods"][0].food_name;
         var calories = result["foods"][0].nf_calories;
         var total_fat = result["foods"][0].nf_total_fat;
