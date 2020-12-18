@@ -3,6 +3,8 @@
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-one-page-wonder/blob/master/LICENSE)
  */
+
+
 body {
   font-family: Lato;
 }
@@ -50,8 +52,7 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background: url('../img/cover.jpg');
-  opacity: 0.9;
+  background: url('../img/food2.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -71,7 +72,6 @@ header.masthead .bg-circle {
   z-index: 0;
   position: absolute;
   border-radius: 100%;
-  background: linear-gradient(0deg, #ee0979 0, #ff6a00 100%);
 }
 header.masthead .bg-circle-1 {
   height: 90rem;
@@ -109,34 +109,50 @@ header.masthead .bg-circle-4 {
     font-size: 4rem;
   }
 }
-.bg-primary {
-  background-color: #ee0979 !important;
-}
-.btn-primary {
-  background-color: #ee0979;
-  border-color: #ee0979;
-}
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
-  background-color: #bd0760 !important;
-  border-color: #bd0760 !important;
-}
-.btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
-}
-.btn-secondary {
-  background-color: #ff6a00;
-  border-color: #ff6a00;
-}
-.btn-secondary:active,
-.btn-secondary:focus,
-.btn-secondary:hover {
-  background-color: #c50 !important;
-  border-color: #c50 !important;
-}
-.btn-secondary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+
+/* form box */
+input[type=text], select {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
+button{
+  width: 200px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+button:hover {
+  background-color: #45a049;
+}
+
+#box {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.radio
+{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#weight_measure, #height_measure
+{
+    width: 100px;
+}

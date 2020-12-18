@@ -21,6 +21,15 @@
     <!-- Custom styles for this template -->
     <link href="css/allergy.css" rel="stylesheet">
 
+
+    <!--Load local app.js file-->
+    <script type="text/javascript" src="js/allergy.js"></script>
+    <script src="js/quagga.js" type="text/javascript"></script>
+    <!--Load JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
 </head>
 
 <body>
@@ -64,7 +73,19 @@
         </div>
     </header>
 
-    <
+    <section>
+        <br>
+        <h4>Scan A Bar Code to see the Nutrition for any Branded Food</h4>
+        <p>*Note: the food has to be <i> branded</i> </p>
+        <img src="./img/scanner.jpg" width="300" height="200">
+        <div class="controls">
+            <fieldset>
+                <input type="file" accept="image/*;capture=camera">
+                <button onclick="search()">Search</button>
+            </fieldset>
+        </div>
+        <div id="interactive" class="viewport"><br clear="all"></div>
+    </section>
 
 
 
